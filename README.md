@@ -1,5 +1,44 @@
 # Calories
 
+Thanks for taking the time to complete this code test, we really appreciate it!
+
+## Introduction
+
+Welcome to the calories app! The goal of this app is to make it easy for users to look up the calorific content of their food. We've put together designs so all that is left is for you to build out the UI.
+
+## Instructions:
+
+This repository contains a basic Create React App project.
+
+First off:
+
+Please _clone_ (don't fork) this repository, complete the test and then upload to a public repository on github and send us the link. You'll need node to run this code but further instructions can be found further down this page.
+
+```bash
+git clone git@github.com:yourpexxi/calories.git
+cd calories
+git remote remove origin
+git remote add origin <Your Repository>
+```
+
+### The API
+
+We'd like you to make use of the freely available [Nutritionix API](https://developer.nutritionix.com/). This includes the [Instant Endpoint](https://docs.google.com/document/d/1_q-K-ObMTZvO0qUEAxROrN3bwMujwAN25sLHwJzliK0/edit#heading=h.h3vlpu5rgxy0) which can be used for autcompletion and the [Natural Language for Nutrients endpoint](https://docs.google.com/document/d/1_q-K-ObMTZvO0qUEAxROrN3bwMujwAN25sLHwJzliK0/edit) which can be used to fetch the calorie information for whatever a user enters.
+
+### Designs
+
+You will find a zip file of the designs in this directory. The app takes the form of a single page. It uses the Material UI component library as standard. The components that we'd like to see you put together (in order of priority) are:
+
+- Found items information list (using the natural language for nutrients endpoint)
+- Favourites list (these do not require an API call, a client side integration is all that is required)
+- Autocomplete search bar (using the instant endpoint)
+
+Please don't spend more than 3 hours on this task (not including initial download and setup). If you reach 3 hours, please commit your code as-is and supply a pull request.
+
+====
+
+## CRA Generated README
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
