@@ -8,7 +8,7 @@ Welcome to the calories app! The goal of this app is to make it easy for users t
 
 ## Instructions:
 
-This repository contains a basic Create React App project.
+This repository contains a basic Create React App project. If you would prefer to initialize your own feel free to do so.
 
 First off:
 
@@ -34,6 +34,10 @@ You will find a zip file of the designs in this directory. The app takes the for
 - Autocomplete search bar (using the instant endpoint)
 
 Please don't spend more than 3 hours on this task (not including initial download and setup). If you reach 3 hours, please commit your code as-is and supply a pull request.
+
+### Other considerations
+
+If you have the time, please add an ideas.MD with what you would like to do to make this application production ready and ensure it's easy to maintain.
 
 ====
 
