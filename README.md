@@ -20,6 +20,7 @@ cd calories
 git remote remove origin
 git remote add origin <Your Repository>
 ```
+# <span style="color:red">Note: To run, update the API keys in the .env file</span>
 
 ### The API
 
