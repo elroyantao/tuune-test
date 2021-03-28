@@ -3,12 +3,22 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 import styles from './SearchFoods.module.css'
+import Autocomplete from '@material-ui/lab/Autocomplete'
+import searchFood from '../../api/searchFood'
 
 const SearchFoods = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('')
+  const [options, setOptions] = useState([])
 
-  const handleChange = (event) => {
-    setSearchTerm(event.target.value)
+  const handleAutocompleteFetch = async (event, value) => {
+    if (value) {
+      const result = await searchFood(value)
+      setOptions(result)
+    }
+  }
+
+  const handleSearchChange = (event, value) => {
+    setSearchTerm(value)
   }
 
   const handleSearch = () => {
@@ -28,15 +38,24 @@ const SearchFoods = ({ onSearch }) => {
   return (
     <div className={styles.container}>
       <div>Enter a query like &quot;1 cup mashed potatoes&quot; to get your nutritional info.</div>
-      <TextField
-        variant="outlined"
-        placeholder="1 cup mashed potatoes"
-        value={searchTerm}
-        onChange={handleChange}
-        fullWidth
-        InputProps={{
-          endAdornment: renderButton()
-        }}
+      <Autocomplete
+        freeSolo
+        disableClearable
+        onChange={handleSearchChange}
+        onInputChange={handleAutocompleteFetch}
+        options={options.map(({ food_name }) => food_name)}
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            variant="outlined"
+            placeholder="1 cup mashed potatoes"
+            fullWidth
+            InputProps={{
+              ...params.InputProps,
+              endAdornment: renderButton()
+            }}
+          />
+        )}
       />
     </div>
   )
