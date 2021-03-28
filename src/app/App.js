@@ -2,14 +2,14 @@ import { Container } from '@material-ui/core'
 import React from 'react'
 
 import Header from '../components/Header/Header'
-import NutrientsContainer from '../container/NutrientsContainer/NutrientsContainer'
+import FoodContainer from '../container/FoodContainer/FoodContainer'
 
 function App() {
   return (
     <div>
       <Header />
       <Container maxWidth="lg">
-        <NutrientsContainer />
+        <FoodContainer />
       </Container>
     </div>
   )
