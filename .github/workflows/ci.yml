@@ -139,7 +139,7 @@ jobs:
         run: |
           website_s3_bucket=$(aws ssm get-parameter --name /tuune/prod/website_s3_bucket --query Parameter.Value --output text)
           echo "::set-output name=website_s3_bucket::$website_s3_bucket"
-          website_s3_bucket=$(aws ssm get-parameter --name /tuune/prod/cloudfront_id --query Parameter.Value --output text)
+          cloudfront_id=$(aws ssm get-parameter --name /tuune/prod/cloudfront_id --query Parameter.Value --output text)
           echo "::set-output name=cloudfront_id::$cloudfront_id"
       - name: Run build
         run: yarn build
