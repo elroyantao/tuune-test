@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {
+  IconButton,
   Paper,
   Table,
   TableBody,
@@ -59,8 +60,10 @@ const FoodTable = ({ foods, favourites, addFav, removeFav }) => {
                 <TableCell>{nf_calories} kcal</TableCell>
                 <TableCell>{serving_weight_grams} g</TableCell>
                 <TableCell>{tags.food_group}</TableCell>
-                <TableCell onClick={favClicked(food)}>
-                  {favourites[ndb_no] ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                <TableCell>
+                  <IconButton onClick={favClicked(food)}>
+                    {favourites[ndb_no] ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                  </IconButton>
                 </TableCell>
               </TableRow>
             )

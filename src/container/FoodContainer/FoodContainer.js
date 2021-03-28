@@ -5,6 +5,7 @@ import SearchFoods from '../../components/SearchFoods/SearchFoods'
 import fetchNutrients from '../../api/fetchNutrients'
 import FoodTable from '../../components/FoodTable/FoodTable'
 import favouriteReducer, { initialFavourites } from '../../reducers/favouriteReducer'
+import Favourites from '../../components/Favourites/Favourites'
 
 const FoodContainer = () => {
   const [foods, setFoods] = useState([])
@@ -36,7 +37,11 @@ const FoodContainer = () => {
         </Paper>
       </Grid>
       <Grid item xs={12} md={4}>
-        <div style={{ height: '100vh', background: 'pink' }}></div>
+        <Favourites
+          favourites={favourites.entity}
+          favList={favourites.list}
+          removeFav={updateFav('REMOVE_FAVOURITE')}
+        />
       </Grid>
     </Grid>
   )
